@@ -8,12 +8,12 @@ export const useForm = ( initialState = {} ) => {
         setValues( initialState )
     }
 
-    const hadleInputChange = ( { target } ) =>{
+    const handleInputChange = ( { target } ) =>{
         setValues( {
             ...values,
             [target.name ]: target.value
         })
     }
 
-    return [ values, hadleInputChange, reset ];
+    return [ values, handleInputChange, reset ];
 }
